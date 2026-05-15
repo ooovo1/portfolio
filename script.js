@@ -68,10 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-});
-    
+
     // ==========================================
-    // MOBILE HAMBURGER MENU TOGGLE
+    // MOBILE HAMBURGER MENU TOGGLE (Now correctly scoped inside DOMContentLoaded)
     // ==========================================
     const hamburgerBtn = document.getElementById("hamburgerBtn");
     const navLinks = document.getElementById("navLinks");
@@ -92,3 +91,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+}); 
