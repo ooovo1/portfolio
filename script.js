@@ -69,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
     
     // ==========================================
     // MOBILE HAMBURGER MENU TOGGLE
@@ -94,7 +92,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ==========================================
-    // 1. HOME PAGE EFFECTS (index.html)
-    // ==========================================
-    // ... rest of your existing profile image code continues below safely ...
