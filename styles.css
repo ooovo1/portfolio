@@ -690,7 +690,7 @@ nav {
 
 /* --- Base Navigation Styles (Desktop Defaults) --- */
 .hamburger {
-    display: none; /* Hide hamburger button on desktop screens */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     background: none;
@@ -706,19 +706,19 @@ nav {
     transition: 0.3s ease;
 }
 
-/* --- Mobile Navigation Tweak (768px and smaller) --- */
+
 @media (max-width: 768px) {
     nav {
         position: relative;
     }
 
     .hamburger {
-        display: flex; /* Show the hamburger lines on mobile */
+        display: flex; 
     }
 
-    /* Transform navigation menu into a clean drop-down container */
+   
     .nav-links {
-        display: none; /* Hidden by default */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -732,7 +732,7 @@ nav {
         box-shadow: 0 10px 15px rgba(0,0,0,0.3);
     }
 
-    /* This class gets added dynamically by script.js when clicking the button */
+  
     .nav-links.active {
         display: flex; 
     }
@@ -742,8 +742,6 @@ nav {
         display: block;
         padding: 10px 0;
     }
-
-    /* Smooth X animation for the active hamburger button */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
