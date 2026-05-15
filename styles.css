@@ -2,93 +2,755 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
     line-height: 1.6;
-    color: #333;
-    background: #f9f9f9;
-  }
-  header nav {
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 8%;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
     display: flex;
-    gap: 1.5rem;
-    padding: 1rem 2rem;
-    background: #222;
-  }
-  header nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  header nav a:hover {
-    text-decoration: underline;
-  }
-  .about-container {
-    max-width: 700px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .profile-photo {
-    display: block;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.logo-circle {
+    background-color: white;
+    color: black;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    margin: 0 auto 1.5rem;
-  }
-  h1, h2 {
-    margin-bottom: 0.75rem;
-  }
-  h2 {
-    margin-top: 1.5rem;
-  }
-  .skills-list {
-    list-style: disc inside;
-    padding-left: 1rem;
-  }
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.875rem;
-    color: #777;
-  }
-  .home-container {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 2rem;
-    text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero .highlight {
-    color: #0078d7;
-  }
-  .hero h2 {
-    font-weight: normal;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  .hero p {
-    max-width: 600px;
-    margin: 0 auto 1.5rem;
-    color: #444;
-  }
-  .btn {
-    display: inline-block;
-    background: #0078d7;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
     text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.3s;
-  }
-  .btn:hover {
-    background: #005ea3;
-  }
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center; 
+    gap: 60px;
+    max-width: 1100px;
+}
+
+
+.profile-frame {
+    flex-shrink: 0;
+    width: 220px; 
+    height: 220px;
+    border: 2px solid #eee;
+    border-radius: 100px; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%; /* Changed to 100% to fill the centered frame */
+    object-fit: cover;
+}
+
+/* Content Styling */
+.intro {
+    color: #444;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+/* Skills Section - The "Professional" upgrade */
+.intro h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #888;
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.skills-list li {
+    background: #f5f5f7;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* Education Layout */
+.intro strong {
+    color: #000;
+}
+
+/* Mobile Compatibility */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        margin: 0 auto 20px auto;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none; 
+    }
+    
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/* --- CONTACT PAGE STYLES --- */
+.contact-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Helps buttons wrap on small phone screens */
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon i {
+    font-size: 2.5rem; /* Logo size */
+}
+
+.social-icon span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Hover effect to make it interactive */
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: #007bff; /* Changes to a nice blue on hover */
+}
+
+/* Mobile Tweak for Contact */
+@media (max-width: 600px) {
+    .social-links {
+        gap: 20px;
+    }
+    .social-icon i {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ==========================================================================
+   1. GLOBAL STYLES & NAVIGATION (Applies to all pages)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.logo-circle {
+    background-color: white;
+    color: black;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Base Mobile Navigation Tweak */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* ==========================================================================
+   2. HOME PAGE HERO SECTION (index.html)
+   ========================================================================== */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-frame {
+    width: 220px;
+    height: 220px;
+    border: 2px solid #ddd;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.profile-pic {
+    max-width: 100%;
+}
+
+.intro {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #111;
+    margin: 5px 0;
+}
+
+.sub-headline {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Hero Mobile Layout */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .intro {
+        font-size: 1.1rem;
+    }
+    .sub-headline {
+        font-size: 1rem;
+    }
+}
+
+
+/* ==========================================================================
+   3. TECH STACK PAGE STYLES (tech-stack.html)
+   ========================================================================== */
+.stack-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.stack-section h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.stack-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.stack-card:hover {
+    transform: translateY(-5px);
+    border-color: #7f00ff; /* Purple theme highlight */
+}
+
+.stack-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.stack-card p {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Tech Stack Mobile Tweak */
+@media (max-width: 600px) {
+    .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .stack-card {
+        width: 100%;
+        height: 120px;
+    }
+    .stack-card img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* ==========================================================================
+   4. CERTIFICATIONS PAGE STYLES (certificates.html)
+   ========================================================================== */
+.cert-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.cert-section h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.cert-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    width: 240px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    border-color: #007bff; /* Distinct blue highlight border */
+}
+
+.cert-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.cert-card p {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+/* Certifications Mobile Tweak */
+@media (max-width: 650px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .cert-card {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .cert-card img {
+        height: 80px;
+    }
+}
+
+
+/* ==========================================================================
+   5. CONTACT PAGE STYLES (contact.html)
+   ========================================================================== */
+.contact-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon i {
+    font-size: 2.5rem;
+}
+
+.social-icon span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+}
+
+/* Contact Mobile Tweak */
+@media (max-width: 600px) {
+    .social-links {
+        gap: 20px;
+    }
+    .social-icon i {
+        font-size: 2rem;
+    }
+}
+
+
+/* ==========================================================================
+   6. IMAGE POPUP MODAL STYLES
+   ========================================================================== */
+.viewable-cert {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.viewable-cert:hover {
+    opacity: 0.9;
+}
+
+.cert-title {
+    cursor: pointer;
+    color: #007bff; /* Turns title blue so users know it's a link */
+    text-decoration: underline;
+    margin-top: auto;
+}
+
+.cert-title:hover {
+    color: #0056b3;
+}
+
+/* Dark Background Overlay */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (The Big Image itself) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.9); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* Close Button (X) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #bbb;
+}
+
+#modalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+
+
+
+
+/* --- Base Navigation Styles (Desktop Defaults) --- */
+.hamburger {
+    display: none; /* Hide hamburger button on desktop screens */
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* --- Mobile Navigation Tweak (768px and smaller) --- */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger lines on mobile */
+    }
+
+    /* Transform navigation menu into a clean drop-down container */
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+        z-index: 100;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    }
+
+    /* This class gets added dynamically by script.js when clicking the button */
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links a {
+        font-size: 1rem !important; /* Makes it easier to tap links with a thumb */
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Smooth X animation for the active hamburger button */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

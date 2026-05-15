@@ -1,0 +1,68 @@
+.stack-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.stack-section h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Text gets smaller on mobile automatically */
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.stack-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.stack-card:hover {
+    transform: translateY(-5px);
+    border-color: #7f00ff; 
+}
+
+.stack-card img {
+    width: 60px;  /* Keeps all your logos the same size */
+    height: 60px;
+    object-fit: contain; /* Prevents logos from stretching */
+    margin-bottom: 10px;
+}
+
+.stack-card p {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 600px) {
+    .stack-grid {
+        grid-template-columns: repeat(2, 1fr); /* Exactly 2 logos per row on phones */
+        gap: 15px;
+    }
+
+    .stack-card {
+        width: 100%; /* Uses available grid space */
+        height: 120px;
+    }
+
+    .stack-card img {
+        width: 45px;
+        height: 45px;
+    }
+}

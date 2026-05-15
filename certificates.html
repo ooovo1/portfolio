@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasper Durana | Certifications</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Jasper Durana
+            </div>
+            
+            <button class="hamburger" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tech-stack.html">Tech Stack</a></li>
+                <li><a href="certificates.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cert-section">
+        <h1>My Certifications</h1>
+    
+        <div class="cert-grid">
+            <div class="cert-card">
+                <img src="certificates/Python.png" alt="Python Essentials 1" class="viewable-cert">
+                <p class="cert-title" data-link="https://www.credly.com/badges/a8c3537f-c086-4b8d-8c5c-eb43ab4a125e">Python Essentials 1</p>
+            </div>
+
+            <div class="cert-card">
+                <img src="certificates/Networking.png" alt="Networking Basics" class="viewable-cert">
+                <p class="cert-title" data-link="https://www.credly.com/badges/b81290fb-4a35-406c-8986-de8ff7d09227">Networking Basics</p>
+            </div>
+        </div>
+    </main>
+    <div id="certModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgTarget">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
