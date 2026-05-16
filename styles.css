@@ -95,11 +95,11 @@ nav {
 
 .profile-pic {
     width: 100%;
-    height: 100%; /* Changed to 100% to fill the centered frame */
+    height: 100%; 
     object-fit: cover;
 }
 
-/* Content Styling */
+
 .intro {
     color: #444;
 }
@@ -118,7 +118,7 @@ nav {
     max-width: 600px;
 }
 
-/* Skills Section - The "Professional" upgrade */
+
 .intro h2 {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -146,12 +146,12 @@ nav {
     text-align: center;
 }
 
-/* Education Layout */
+
 .intro strong {
     color: #000;
 }
 
-/* Mobile Compatibility */
+
 @media (max-width: 900px) {
     .hero-container {
         flex-direction: column;
@@ -190,7 +190,7 @@ nav {
 
 
 
-/* --- CONTACT PAGE STYLES --- */
+
 .contact-section {
     height: 80vh;
     display: flex;
@@ -215,7 +215,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Helps buttons wrap on small phone screens */
+    flex-wrap: wrap; 
 }
 
 .social-icon {
@@ -229,7 +229,7 @@ nav {
 }
 
 .social-icon i {
-    font-size: 2.5rem; /* Logo size */
+    font-size: 2.5rem; 
 }
 
 .social-icon span {
@@ -237,13 +237,12 @@ nav {
     font-weight: 600;
 }
 
-/* Hover effect to make it interactive */
+
 .social-icon:hover {
     transform: translateY(-5px);
-    color: #007bff; /* Changes to a nice blue on hover */
-}
+    color: #007bff; 
 
-/* Mobile Tweak for Contact */
+
 @media (max-width: 600px) {
     .social-links {
         gap: 20px;
@@ -255,9 +254,7 @@ nav {
 
 
 
-/* ==========================================================================
-   1. GLOBAL STYLES & NAVIGATION (Applies to all pages)
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -318,7 +315,6 @@ nav {
     color: white;
 }
 
-/* Base Mobile Navigation Tweak */
 @media (max-width: 768px) {
     .nav-links {
         gap: 12px;
@@ -329,9 +325,6 @@ nav {
 }
 
 
-/* ==========================================================================
-   2. HOME PAGE HERO SECTION (index.html)
-   ========================================================================== */
 .hero {
     height: 85vh;
     display: flex;
@@ -378,7 +371,7 @@ nav {
     color: #666;
 }
 
-/* Hero Mobile Layout */
+
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
@@ -397,9 +390,7 @@ nav {
 }
 
 
-/* ==========================================================================
-   3. TECH STACK PAGE STYLES (tech-stack.html)
-   ========================================================================== */
+
 .stack-section {
     padding: 60px 10%;
     text-align: center;
@@ -435,7 +426,7 @@ nav {
 
 .stack-card:hover {
     transform: translateY(-5px);
-    border-color: #7f00ff; /* Purple theme highlight */
+    border-color: #7f00ff; 
 }
 
 .stack-card img {
@@ -452,7 +443,7 @@ nav {
     text-transform: uppercase;
 }
 
-/* Tech Stack Mobile Tweak */
+
 @media (max-width: 600px) {
     .stack-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -469,9 +460,7 @@ nav {
 }
 
 
-/* ==========================================================================
-   4. CERTIFICATIONS PAGE STYLES (certificates.html)
-   ========================================================================== */
+
 .cert-section {
     padding: 60px 10%;
     text-align: center;
@@ -496,7 +485,7 @@ nav {
     border: 1px solid #e5e5e5;
     border-radius: 12px;
     width: 240px;
-    height: 190px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -507,7 +496,7 @@ nav {
 
 .cert-card:hover {
     transform: translateY(-4px);
-    border-color: #007bff; /* Distinct blue highlight border */
+    border-color: #007bff; 
 }
 
 .cert-card img {
@@ -523,7 +512,7 @@ nav {
     color: #222;
 }
 
-/* Certifications Mobile Tweak */
+
 @media (max-width: 650px) {
     .cert-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -540,9 +529,7 @@ nav {
 }
 
 
-/* ==========================================================================
-   5. CONTACT PAGE STYLES (contact.html)
-   ========================================================================== */
+
 .contact-section {
     height: 80vh;
     display: flex;
@@ -594,7 +581,7 @@ nav {
     color: #007bff;
 }
 
-/* Contact Mobile Tweak */
+
 @media (max-width: 600px) {
     .social-links {
         gap: 20px;
@@ -605,9 +592,7 @@ nav {
 }
 
 
-/* ==========================================================================
-   6. IMAGE POPUP MODAL STYLES
-   ========================================================================== */
+
 .viewable-cert {
     cursor: pointer;
     transition: opacity 0.2s;
@@ -619,7 +604,7 @@ nav {
 
 .cert-title {
     cursor: pointer;
-    color: #007bff; /* Turns title blue so users know it's a link */
+    color: #007bff; 
     text-decoration: underline;
     margin-top: auto;
 }
@@ -628,7 +613,7 @@ nav {
     color: #0056b3;
 }
 
-/* Dark Background Overlay */
+
 .modal {
     display: none; 
     position: fixed; 
@@ -641,7 +626,7 @@ nav {
     background-color: rgba(0,0,0,0.9); 
 }
 
-/* Modal Content (The Big Image itself) */
+
 .modal-content {
     margin: auto;
     display: block;
@@ -658,7 +643,7 @@ nav {
     to {transform: scale(1); opacity: 1;}
 }
 
-/* Close Button (X) */
+
 .close-modal {
     position: absolute;
     top: 20px;
@@ -688,7 +673,7 @@ nav {
 
 
 
-/* --- Base Navigation Styles (Desktop Defaults) --- */
+
 .hamburger {
     display: none; 
     flex-direction: column;
@@ -738,7 +723,7 @@ nav {
     }
 
     .nav-links a {
-        font-size: 1rem !important; /* Makes it easier to tap links with a thumb */
+        font-size: 1rem !important; 
         display: block;
         padding: 10px 0;
     }

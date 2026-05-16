@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const profilePic = document.querySelector(".profile-pic");
     
     if (profilePic) {
-        // Soft fade-in effect when the page loads
         profilePic.style.opacity = "0";
         profilePic.style.transition = "opacity 0.8s ease, transform 0.5s ease";
         

@@ -4,7 +4,7 @@
 }
 
 .stack-section h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Text gets smaller on mobile automatically */
+    font-size: clamp(2rem, 5vw, 3.5rem); 
     font-weight: 800;
     margin-bottom: 50px;
 }
@@ -36,9 +36,9 @@
 }
 
 .stack-card img {
-    width: 60px;  /* Keeps all your logos the same size */
+    width: 60px;  
     height: 60px;
-    object-fit: contain; /* Prevents logos from stretching */
+    object-fit: contain; 
     margin-bottom: 10px;
 }
 
@@ -49,10 +49,9 @@
     text-transform: uppercase;
 }
 
-/* --- MOBILE VIEW --- */
 @media (max-width: 600px) {
     .stack-grid {
-        grid-template-columns: repeat(2, 1fr); /* Exactly 2 logos per row on phones */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
