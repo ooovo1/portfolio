@@ -57,7 +57,7 @@
     }
 
     .stack-card {
-        width: 100%; /* Uses available grid space */
+        width: 100%; 
         height: 120px;
     }
 
